@@ -55,19 +55,22 @@ body {
     background-color: black;
     border-style: outset;
 }
-.main__div-nadpis-main {
+.div-nadpis-main {
     display: flex;
     justify-content: center;
     margin-bottom: 120px;
-    letter-spacing: 40px;
-    font-size: xx-large;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), 78%,rgb(254, 161, 0), rgb(0, 0, 0));
-    /* magic workarounds for modern browsers */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), 78%,rgb(254, 152, 0), rgb(0, 0, 0));
     -webkit-text-fill-color: transparent;
     background-clip: unset;
     -webkit-background-clip: text;
-    /* make all colors visible at once */
     background-size: 100% 80%;
+    margin-top: 50px;
+}
+.nadpis-main {
+    font-size: 30px;
 }
 /* VZDĚLÁNÍ */
 .main__image {
@@ -83,7 +86,7 @@ body {
 }
 .main__nadpis-years {
     font-weight: 700;
-    color: rgb(176, 112, 1);
+    color: rgb(213, 137, 5);
     font-size: 16px;
 }
 .main__image-raketa {
@@ -96,12 +99,16 @@ body {
 
 .main__image-web {
     width: 120px;
-    border-radius: 3px;
+    border-radius: 10px;
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+.main__image-web:hover {
+box-shadow: 0 0 8px white;
+
 }
 .main__odkaz-web {
-    width: 180px;
+    width: 120px;
 }
 .main__text-podnadpis {
     text-transform: uppercase;
@@ -122,7 +129,9 @@ body {
     list-style-position: inside;
     list-style-type: circle;
 }
-
+.main__text-podnadpis-napln {
+    text-transform: none;
+}
 /* PATIČKA */
 .footer {
     display:flex;
@@ -135,11 +144,26 @@ body {
     color: rgb(217, 217, 217);
     padding: 20px;
 }
+@media screen and (min-width: 350px) {
+
+    .nadpis-main {
+        font-size: 35px;
+    }
+}
+@media screen and (min-width: 450px) {
+
+    .nadpis-main {
+        font-size: 40px;
+    }
+}
 @media screen and (min-width: 500px) {
     .main {
         width: 380px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .nadpis-main {
+        font-size: 45px;
     }
 }
 
@@ -156,6 +180,9 @@ body {
         width: 500px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .nadpis-main {
+        font-size: 50px;
     }
 }
 @media screen and (min-width: 800px) {
@@ -175,5 +202,8 @@ body {
     }
     .main__section {
         padding: 40px 40px 45px 40px;
+    }
+    .nadpis-main {
+        font-size: 60px;
     }
 }
